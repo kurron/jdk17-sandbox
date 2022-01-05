@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * https://www.baeldung.com/java-record-keyword
  * https://dzone.com/articles/jdk-14-records-for-spring-devs
  */
-public record ResponseDTO(@JsonProperty("id") long id,  @JsonProperty("message") String message) {
+public record ResponseDTO(@JsonProperty("id") long id,  @JsonProperty("message") String message, @JsonProperty("junk") Object junk) {
 
     // do some silly constructor validation
     public ResponseDTO {
