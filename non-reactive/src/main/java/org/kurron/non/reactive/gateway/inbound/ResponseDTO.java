@@ -5,7 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
- * Data Transfer Object for the GET request. Here is a good discussion about Java Records: https://dzone.com/articles/jdk-14-records-for-spring-devs
+ * Data Transfer Object for the GET request. Discussions about Java Records:
+ * https://www.baeldung.com/java-record-keyword
+ * https://dzone.com/articles/jdk-14-records-for-spring-devs
  */
 public record ResponseDTO(@JsonProperty("id") long id,  @JsonProperty("message") String message) {
 
