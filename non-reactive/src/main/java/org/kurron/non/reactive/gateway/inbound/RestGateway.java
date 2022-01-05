@@ -15,7 +15,6 @@ public class RestGateway {
 
     @GetMapping(path="/hello", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ResponseDTO> handleGet() {
-        // some examples of Local-Variable Type Inference -- https://www.baeldung.com/java-10-local-variable-type-inference
         var now = Instant.now();
         var id = now.getEpochSecond();
         var message = calculateMessage();
@@ -24,7 +23,6 @@ public class RestGateway {
     }
 
     private String calculateMessage() {
-        // Switch Expression discussion: https://www.baeldung.com/java-switch-pattern-matching
         var selected = selectRealm();
         return switch (selected) {
             case Asgard -> "Asgard";
@@ -34,8 +32,14 @@ public class RestGateway {
             case Niflheim -> "Niflheim";
             case Muspelheim -> "Muspelheim";
             default -> {
-                System.err.println("One case is missing!");
-                yield "Unknown";
+                var message = """
+                        This is a
+                        multi-line message
+                        indicating that one of the "impossible to miss" cases
+                        was missing!
+                        """;
+                System.err.println(message);
+                yield message;
             }
         };
     }

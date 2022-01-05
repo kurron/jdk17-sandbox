@@ -18,6 +18,6 @@ public record ResponseDTO(@JsonProperty("id") long id,  @JsonProperty("message")
         }
     }
 
-    @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "ID cannot be an even number!")
+    @ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR, reason = "ID cannot be an even number!")
     static class SillyValidationError extends IllegalArgumentException {}
 }

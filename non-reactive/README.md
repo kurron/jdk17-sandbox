@@ -10,6 +10,12 @@ Run `./mvnw --batch-mode --update-snapshots --errors clean verify` to compile, a
 
 # Installation
 # Tips and Tricks
+## Showcased Language Features
+* [Local-Variable Type Inference](https://www.baeldung.com/java-10-local-variable-type-inference)
+* [Record](https://www.baeldung.com/java-record-keyword) and [Record](https://dzone.com/articles/jdk-14-records-for-spring-devs)
+* [Switch Expression](https://www.baeldung.com/java-switch-pattern-matching)
+* [Text Blocks](https://www.baeldung.com/java-text-blocks)
+
 # Troubleshooting
 # Decision Log
 # License and Credits
